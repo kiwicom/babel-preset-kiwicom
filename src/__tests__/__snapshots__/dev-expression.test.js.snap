@@ -49,11 +49,11 @@ exports[`matches expected output: ternary.js 1`] = `
 // @flow
 
 // eslint-disable-next-line no-unused-vars
-const dev = __DEV__ ? true : false;
+const dev = __DEV__ ? 'true' : 'false';
 
 ~~~~~~~~~~ OUTPUT ~~~~~~~~~~
 "use strict";
 
 // eslint-disable-next-line no-unused-vars
-const dev = process.env.NODE_ENV !== "production" ? true : false;
+const dev = process.env.NODE_ENV !== "production" ? 'true' : 'false';
 `;
