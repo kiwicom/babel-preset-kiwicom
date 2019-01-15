@@ -16,6 +16,34 @@ if (process.env.NODE_ENV !== "production") {
 }
 `;
 
+exports[`matches expected output: objectKey.js 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+// @flow
+
+declare var __DEV__: string;
+
+module.exports = {
+  rules: {},
+  globals: {
+    __DEV__: 'value',
+    [__DEV__]: "this can be changed because it's dynamic",
+    key: __DEV__,
+  },
+};
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+"use strict";
+
+module.exports = {
+  rules: {},
+  globals: {
+    __DEV__: 'value',
+    [process.env.NODE_ENV !== "production"]: "this can be changed because it's dynamic",
+    key: process.env.NODE_ENV !== "production"
+  }
+};
+`;
+
 exports[`matches expected output: ternary.js 1`] = `
 ~~~~~~~~~~ INPUT ~~~~~~~~~~
 // @flow
