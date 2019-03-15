@@ -1,4 +1,4 @@
-// @flow strict-local
+// @flow
 
 export default async function test(a: Object): Object {
   return {
