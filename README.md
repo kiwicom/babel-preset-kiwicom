@@ -1,3 +1,9 @@
+## This package is deprecated
+
+`@kiwicom/babel-preset-kiwicom` is no longer maintained, use [@adeira/babel-preset-adeira](https://www.npmjs.com/package/@adeira/babel-preset-adeira) instead
+
+---
+
 **This package doesn't support React Native**
 
 This preset simplifies Babel configuration for modern JavaScript we use at Kiwi.com.
